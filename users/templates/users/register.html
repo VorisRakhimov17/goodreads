@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ro'yxatdan o'tish</title>
+
+</head>
+<body>
+
+    <h2>Ro'yxatdan o'tish</h2>
+    <form action="{% url 'users:register' %}" method="POST" >
+        {% csrf_token %}
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="enter your username"> <br> <br>
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="enter your first_name"> <br> <br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" placeholder="enter your last_name"> <br> <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" > <br> <br>
+
+        <label for="password">Parol:</label>
+        <input type="password" id="password" name="password" placeholder="Parol"> <br> <br>
+
+        <button type="submit">Ro'yxatdan o'tish</button>
+
+    </form>
+
+</body>
+</html>

@@ -26,7 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'books'
+
+    'books',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -44,7 +46,9 @@ ROOT_URLCONF = 'goodreads.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'goodreads',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': '12345',
         'HOST': '127.0.0.1',
         'PORT': 5432,
 
