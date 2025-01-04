@@ -83,3 +83,6 @@ class RegisterTestCase(TestCase):
         # 4. check that the form contains the error message
         self.assertFormError(response, 'form', 'username', 'A user with that username already exists.')
 
+class ProfileTestCase(TestCase):
+    def test_login_required(self):
+        self.client.post()

@@ -44,3 +44,9 @@ class LoginView(View):
             return redirect("landing_page")
         else:
             return render(request, "users/login.html", {"login_form": login_form})
+
+class ProfileView(View):
+    def get(self, request):
+        if not request.user.is_authenticated:
+            return redirect("users:login")
+        return render(request, "users/profile.html", {"user": request.user})
